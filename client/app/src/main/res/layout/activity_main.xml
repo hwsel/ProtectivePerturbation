@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="rutgers.hwsel.ProtectivePerturbation.MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="52dp"
+        android:contentDescription="Preview of Perturbed Image"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/demoBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="52dp"
+        android:contentDescription="Preview of Perturbed Image"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/demoBtn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/protTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="8dp"
+        android:text="Protected Image"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/image2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serverInfoTxt"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/oriTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="8dp"
+        android:text="Original Image"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/serverInfoTxt"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/statusTxt"
+        android:layout_width="411dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:background="#80000000"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/debugTxt"
+        android:layout_width="411dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="12dp"
+        android:background="#80000000"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statusTxt" />
+
+    <Button
+        android:id="@+id/demoBtn"
+        android:layout_width="288dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:text="Single Demo"
+        app:layout_constraintBottom_toTopOf="@+id/genPicBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/genPicBtn"
+        android:layout_width="288dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:text="GENERATE ALL PROTECTED IMG"
+        app:layout_constraintBottom_toTopOf="@+id/getTimeBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/getTimeBtn"
+        android:layout_width="288dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="32dp"
+        android:text="Measure Running Time"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/serverInfoTxt"
+        android:layout_width="227dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Put server IP:port here."
+        android:inputType="textPersonName"
+        android:text="192.168.6.154:8081"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/debugTxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
