@@ -243,7 +243,7 @@ the server will call the target model and return the result to the phone.
 
 This demo uses `Mobilenet_v2` as the target model. If you want to try another generator, simply change
 the number 25 in [Line 75](https://github.com/hwsel/ProtectivePerturbation/blob/main/client/app/src/main/java/rutgers/hwsel/ProtectivePerturbation/MainActivity.java#L75) and 76 to some other number `i` (0<=i<64) in `MainActivity.java`. Also,
-change `target_model` accordingly in the `server/mobile_server.py` of the server. Refer to [Server - client APP development](#server---client-app-development-skip-this-section-if-you-dont-want-to-modify-it) section for more instructions.
+change `target_model` accordingly in the `server/mobile_server.py` of the server. Refer to [Server - client APP development](#server---client-app-development-skip-this-section-if-you-do-not-need-to-modify-the-client-app) section for more instructions.
 
 ## 3. Model Training
 
