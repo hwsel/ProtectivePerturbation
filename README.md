@@ -301,7 +301,7 @@ for all the protected images.
 cd server  # always in the server folder when you try to run something of the server
 bash mobile_result_collect.sh
 ```
-5. In the generated `mobile_result_mobisys2022.txt`, you can see the results are listed as follows:
+5. In the generated `mobile_result_mmsys2022.txt`, you can see the results are listed as follows:
    - Protective perturbation generator name (in the format of `target model-X-auxiliary model.ptl`)
    - Accuracy of the target model to classify protected images
    - Accuracy of the auxiliary model to classify protected images
