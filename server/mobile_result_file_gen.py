@@ -16,7 +16,6 @@ from utils.ssim import SSIM
 def get_args():
     parser = ArgumentParser()
     seed_everything(0)
-    parser.add_argument("--description", type=str, default="privacy ml mobisys 2022")
     parser.add_argument("--data_dir", type=str, default="/data/zhongze/files")
     parser.add_argument("--model_A", type=str, default="vgg13_bn")
     parser.add_argument("--model_B", type=str, default="resnet18")
@@ -49,7 +48,7 @@ if __name__ == '__main__':
     aux_model_accuracies = []
     ssims = []
 
-    result_file = r'mobile_result_mobisys2022.txt'
+    result_file = r'mobile_result_mmsys2022.txt'
 
     for i in range(int(5000/args.batch_size)):
         original, perturbed, label = next(test)
