@@ -247,8 +247,21 @@ change `target_model` accordingly in the `server/mobile_server.py` of the server
 
 ## 3. Model Training
 
-In `server/train.py`, `data_dir` and `gpu_id` needs to be customized based on the setting of your environment. Change other 
-settings by demand. You can also use command line instead, for example:
+### Setup the Logger
+
+To setup `wandb`, use the following command (See [official document](https://docs.wandb.ai/quickstart) for more details):
+
+```shell
+wandb login
+```
+
+Instead, you can change `logger` to `tensorboard`, which can be used directly without any acount.
+
+### Training Settings
+
+In `server/train.py`, `data_dir` and `gpu_id` needs to be customized based on the setting of your environment. The target model is set by `model_A`, and the auxiliary model is set by `model_B`. All available models can be found in `all_classifiers`, which is defined in `server/utils/all_classifiers.py`. Change other parameters in `MODULE args` or `TRAINER args` if you'd like to customize the model.
+
+You can also use command line instead, for example:
 
 ```shell
 python train.py \
@@ -259,7 +272,7 @@ python train.py \
          --description "resnet18-X-resnet18"
 ```
 
-You can also use `all_in_one_script.sh` to retrain all the models.
+After you have everything set correctly in the code, you can also use `all_in_one_script.sh` to retrain all the models with only one line command.
 
 ```shell
 bash all_in_one_script.sh <gpu id>

@@ -16,7 +16,7 @@ DATA_DIR = "/home/tangbao/codes/ProtectivePerturbation_MMSys22/recv_from_phone" 
 def get_args():
     parser = ArgumentParser()
     seed_everything(0)
-    parser.add_argument("--description", type=str, default="protective perturbation mobisys 2022")
+    parser.add_argument("--description", type=str, default="protective perturbation mmsys 2022")
     parser.add_argument("--data_dir", type=str, default=DATA_DIR)
     parser.add_argument("--precision", type=int, default=16, choices=[16, 32])
     parser.add_argument("--batch_size", type=int, default=1)
