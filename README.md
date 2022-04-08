@@ -261,7 +261,9 @@ Instead, you can change `logger` to `tensorboard`, which can be used directly wi
 
 In `server/train.py`, `data_dir` and `gpu_id` needs to be customized based on the setting of your environment. The target model is set by `model_A`, and the auxiliary model is set by `model_B`. All available models can be found in `all_classifiers`, which is defined in `server/utils/all_classifiers.py`. Change other parameters in `MODULE args` or `TRAINER args` if you'd like to customize the model.
 
-You can also use command line instead, for example:
+### Start Training
+
+After you have modified the parameters in `server/train.py`, you can simply run it in PyCharm. You can also use command line instead to set the parameters and start the training, for example:
 
 ```shell
 python train.py \
@@ -272,7 +274,7 @@ python train.py \
          --description "resnet18-X-resnet18"
 ```
 
-After you have everything set correctly in the code, you can also use `all_in_one_script.sh` to retrain all the models with only one line command.
+To retrain all the models, you can have the parameters set in `server/train.py` first, and then use `all_in_one_script.sh` to retrain all the models with only one line command.
 
 ```shell
 bash all_in_one_script.sh <gpu id>
