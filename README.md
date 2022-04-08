@@ -247,15 +247,15 @@ change `target_model` accordingly in the `server/mobile_server.py` of the server
 
 ## 3. Model Training
 
-### Setup the Logger
+### Logger Setup
 
-To setup `wandb`, use the following command (See [official document](https://docs.wandb.ai/quickstart) for more details):
+To set up `wandb`, please use the following command (See [official document](https://docs.wandb.ai/quickstart) for more details):
 
 ```shell
 wandb login
 ```
 
-Instead, you can change `logger` to `tensorboard`, which can be used directly without any acount.
+You can change `logger` to `tensorboard`, which can be used directly without an account.
 
 ### Training Settings
 
