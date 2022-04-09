@@ -35,7 +35,7 @@ This repo contains both code and instructions for the following three components
        |-----build.gradle                // gradle config
        |-----...                         // some other config files
  |-----paper
-       |-----ProtectivePerturbation.pdf  // draft version of the paper
+       |-----Paper-Protective_Perturbation-MMSys22.pdf  // camera ready version of the paper
        |-----README.md
  ```
 
