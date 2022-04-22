@@ -96,10 +96,10 @@ If you prefer command line, try the following command to create a virtual enviro
     pip install matplotlib pytorch-lightning==1.2.3 wandb xlsxwriter
     ```
 6. Download `original_target_model.zip` from 
-[this link](https://drive.google.com/drive/folders/1I4jlTiGbqp19_ZF5MTm9RuH8MJcNEVPR?usp=sharing)
+[this link](https://drive.google.com/drive/folders/1lt7m2lBymSUHQcc_6ZThvqIe5EJk7GI0)
 and extract all the `.pt` files to `<ProjectFolder>/server/cifar10_models/state_dicts/`.
 7. Download `original_model.zip` from 
-[this link](https://drive.google.com/drive/folders/1I4jlTiGbqp19_ZF5MTm9RuH8MJcNEVPR?usp=sharing)
+[this link](https://drive.google.com/drive/folders/1lt7m2lBymSUHQcc_6ZThvqIe5EJk7GI0)
 and extract all the `.ckpt` files to `<ProjectFolder>/server/generator_models`.
 
 #### Server - client APP development (skip this section if you do not need to modify the client APP)
@@ -107,7 +107,7 @@ and extract all the `.ckpt` files to `<ProjectFolder>/server/generator_models`.
 1. Use Android Studio to open the `client` folder.
 2. Download the CIFAR10 dataset (`cifar10_test5000.zip`), protective perturbation generator models 
 (`mobile_model.zip`), and target models (`mobile_target_model.zip`) from 
-[this link](https://drive.google.com/drive/folders/1I4jlTiGbqp19_ZF5MTm9RuH8MJcNEVPR?usp=sharing).
+[this link](https://drive.google.com/drive/folders/1lt7m2lBymSUHQcc_6ZThvqIe5EJk7GI0).
 
     Extract these three zip files to `<ProjectFolder>/client/app/src/main/assets`. After extraction, the
     `assets` folder looks like below:
@@ -206,7 +206,7 @@ To set up the client APP, please follow the steps below:
     XXXXXXXXX	device
     ```
 
-    Then download the client APP `ProtectivePerturbationDemo.apk` from [this link](https://drive.google.com/drive/folders/1I4jlTiGbqp19_ZF5MTm9RuH8MJcNEVPR?usp=sharing) and install it using ADB.
+    Then download the client APP `ProtectivePerturbationDemo.apk` from [this link](https://drive.google.com/drive/folders/1lt7m2lBymSUHQcc_6ZThvqIe5EJk7GI0) and install it using ADB.
 
     ```shell
     adb install ProtectivePerturbationDemo.apk
@@ -307,7 +307,7 @@ bash all_in_one_script.sh <gpu id>
     > It takes about an hour to pull all the 320,000 images from a Pixel 3 to the workstation.
 
 2. Download the CIFAR10 dataset (`cifar10_test5000.zip`) from 
-[this link](https://drive.google.com/drive/folders/1I4jlTiGbqp19_ZF5MTm9RuH8MJcNEVPR?usp=sharing), and extract it to `<data folder>` (i.e., the folder where you `adb pull` all the images to in the previous step).
+[this link](https://drive.google.com/drive/folders/1lt7m2lBymSUHQcc_6ZThvqIe5EJk7GI0), and extract it to `<data folder>` (i.e., the folder where you `adb pull` all the images to in the previous step).
 Now in `<data folder>`, you should have 65 folders, under each there are 5000 images.
 3. Modify `data_dir` in `server/mobile_result_file_gen.py` to the path of `<data folder>`.
 4. Run `server/mobile_result_collect.sh` to calculate the results (accuracy for the target model & the auxiliary model, SSIM) 
