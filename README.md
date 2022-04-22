@@ -270,9 +270,11 @@ python train.py \
          --data_dir <your data dir> \
          --model_A resnet18 \
          --model_B resnet18 \
+         --learning_rate 5e-3 \
          --gpu_id <your gpu id> \
          --description "resnet18-X-resnet18"
 ```
+Note that for googlenet-X-vgg13_bn, the learning rate is 1e-3. For others, it is 5e-3. See Section 4.1.3 of the paper for details.
 
 To retrain all the models, you can have the parameters set in `server/train.py` first, and then use `all_in_one_script.sh` to retrain all the models with only one line command.
 

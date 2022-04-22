@@ -55,7 +55,7 @@ if __name__ == "__main__":
 
     # PROGRAM level args
     parser.add_argument("--description", type=str, default="default")
-    parser.add_argument("--data_dir", type=str, default="/data/zhongze/cifar10")
+    parser.add_argument("--data_dir", type=str, default="/home/tangbao/data/cifar10")
     parser.add_argument("--dev", type=int, default=0, choices=[0, 1])
     parser.add_argument("--test", type=int, default=0, choices=[0, 1])
     parser.add_argument(
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--optimizer", type=str, default="Adam", choices=["SGD", "Adam"]
     )
-    parser.add_argument("--learning_rate", type=float, default=5e-3)
+    parser.add_argument("--learning_rate", type=float, default=5e-3)  # 1e-3 for googlenet-vgg13bn, 5e-3 for other models
     parser.add_argument("--weight_decay", type=float, default=5e-4)
     parser.add_argument("--model_A", type=str, default="vgg16_bn")
     parser.add_argument("--model_B", type=str, default="resnet18")

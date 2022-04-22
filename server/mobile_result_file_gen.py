@@ -16,9 +16,9 @@ from utils.ssim import SSIM
 def get_args():
     parser = ArgumentParser()
     seed_everything(0)
-    parser.add_argument("--data_dir", type=str, default="/data/zhongze/files")
-    parser.add_argument("--model_A", type=str, default="vgg13_bn")
-    parser.add_argument("--model_B", type=str, default="resnet18")
+    parser.add_argument("--data_dir", type=str, default="./mobile_protected_img")
+    parser.add_argument("--model_A", type=str, default="googlenet")
+    parser.add_argument("--model_B", type=str, default="vgg13_bn")
     parser.add_argument("--model_name", type=str, default="")
     parser.add_argument("--precision", type=int, default=16, choices=[16, 32])
     parser.add_argument("--num_workers", type=int, default=1)

@@ -76,7 +76,7 @@ def main(args):
 if __name__ == "__main__":
     parser = ArgumentParser()
 
-    parser.add_argument("--data_dir", type=str, default="/data/zhongze/cifar10")
+    parser.add_argument("--data_dir", type=str, default="/home/tangbao/data/cifar10")
     parser.add_argument("--model_dir", type=str, default="./generator_models")
     parser.add_argument("--batch_size", type=int, default=256)
     parser.add_argument("--num_workers", type=int, default=8)
